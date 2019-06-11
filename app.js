@@ -23,6 +23,7 @@ function renderCafe(doc) {
 
     // Deleting data
     cross.addEventListener( 'click', (e) => {
+        e.stopPropagation();
         let id = e.target.parentElement.getAttribute('data-id');
         db.collection('cafes').doc(id).delete();
     })
@@ -32,7 +33,7 @@ function renderCafe(doc) {
 
 // Getting data from Firestore
 
-db.collection('cafes').get().then((snapshot) => {
+db.collection('cafes').orderBy('name' ).get().then((snapshot) => {
    snapshot.docs.forEach(doc => {
        renderCafe(doc)
        
