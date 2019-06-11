@@ -53,14 +53,15 @@ li span:nth-child(2){
 
 li div{
     position: absolute;
-    top: 0;
-    right: 0px;
-    background: rgba(255,255,255,0.6);
+    top: 20;
+    right: 10px;
+    background: rgba(177, 168, 224, 0.6);
     width: 40px;
     text-align: center;
     padding: 10px 0;
     font-weight:  bold;
     cursor:  pointer;
+    border-radius: 70px 50px 70px 50px;
 }
 
 form input{
